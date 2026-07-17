@@ -90,13 +90,13 @@ PROMPT='%F{cyan}%~%f${vcs_info_msg_0_}
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
 
-export LESS_TERMCAP_mb=$'\e[1;31m'    # 点滅開始（赤）
-export LESS_TERMCAP_md=$'\e[1;36m'    # 太字開始（シアン）
-export LESS_TERMCAP_me=$'\e[0m'       # 太字・点滅の終了
-export LESS_TERMCAP_so=$'\e[1;44;33m' # 強調開始（背景青＋文字黄）
-export LESS_TERMCAP_se=$'\e[0m'       # 強調終了
-export LESS_TERMCAP_us=$'\e[1;32m'    # 下線開始（緑）
-export LESS_TERMCAP_ue=$'\e[0m'       # 下線終了
+# export LESS_TERMCAP_mb=$'\e[1;31m'    # 点滅開始（赤）
+# export LESS_TERMCAP_md=$'\e[1;36m'    # 太字開始（シアン）
+# export LESS_TERMCAP_me=$'\e[0m'       # 太字・点滅の終了
+# export LESS_TERMCAP_so=$'\e[1;44;33m' # 強調開始（背景青＋文字黄）
+# export LESS_TERMCAP_se=$'\e[0m'       # 強調終了
+# export LESS_TERMCAP_us=$'\e[1;32m'    # 下線開始（緑）
+# export LESS_TERMCAP_ue=$'\e[0m'       # 下線終了
 
 # ============================================================
 # Aliases
