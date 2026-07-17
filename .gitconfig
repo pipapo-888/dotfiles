@@ -1,0 +1,70 @@
+# ============================================================
+# User
+# ============================================================
+
+[user]
+	name = Kazuya
+	email = kazuya2002uk@gmail.com
+
+# ============================================================
+# Core
+# ============================================================
+
+[core]
+	editor = vim              # コミットメッセージ等の編集に使うエディタ
+	pager = less -FRX         # 1画面に収まる出力はページャを開かない（-F）、色を通す（-R）
+	autocrlf = input          # コミット時のみ CRLF→LF に変換（macOS/Linux 向け）
+	excludesfile = ~/.gitignore_global # 全リポジトリ共通の無視ファイル
+	precomposeUnicode = true  # macOS の濁点分解ファイル名を正規化して扱う
+
+# ============================================================
+# Behavior
+# ============================================================
+
+[init]
+	defaultBranch = main      # git init 時の初期ブランチ名
+
+[pull]
+	rebase = true             # pull は merge ではなく rebase（履歴を一直線に保つ）
+
+[push]
+	default = simple          # 同名の上流ブランチにだけ push
+	autoSetupRemote = true    # 上流未設定でも初回 push で自動追跡
+
+[fetch]
+	prune = true              # fetch のたびにリモートで消えたブランチを掃除
+
+[rebase]
+	autoStash = true          # rebase 前に自動 stash、終了後に戻す
+
+[merge]
+	conflictStyle = zdiff3    # コンフリクト表示に「元の共通部分」も出す
+
+[rerere]
+	enabled = true            # 同じコンフリクトの解決を記録して再利用
+
+# ============================================================
+# Diff / Colors
+# ============================================================
+
+[color]
+	ui = auto                 # 端末出力時のみ色を付ける
+
+[diff]
+	colorMoved = default      # 移動した行を削除/追加と別色で表示
+	algorithm = histogram     # より読みやすい差分アルゴリズム
+
+# ============================================================
+# Aliases
+# ============================================================
+
+[alias]
+	st = status -sb           # 短縮ステータス＋ブランチ行
+	co = checkout
+	br = branch
+	ci = commit
+	unstage = reset HEAD --   # ステージから戻す
+	last = log -1 HEAD        # 直近コミットを表示
+	amend = commit --amend --no-edit # 直前コミットに追加（メッセージ据え置き）
+	lg = log --graph --oneline --decorate --all # グラフ付き一覧
+	undo = reset --soft HEAD~1 # 直前コミットを取り消し（変更は残す）
