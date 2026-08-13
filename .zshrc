@@ -111,3 +111,4 @@ alias d='dirs -v'
 
 alias cd42='cd ~/Desktop/42/Cursus'
 alias bat='batcat'
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
