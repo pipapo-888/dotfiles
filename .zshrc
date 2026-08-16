@@ -38,6 +38,11 @@ setopt AUTO_MENU        # Tab 連打で候補を順に巡回
 setopt COMPLETE_IN_WORD # カーソルが単語の途中でも補完する
 setopt ALWAYS_TO_END    # 補完確定後にカーソルを単語末尾へ
 
+# 入力中に履歴から灰色でサジェストする（→ か End で確定）
+if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
+	source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
+
 # ============================================================
 # Directory navigation
 # ============================================================
