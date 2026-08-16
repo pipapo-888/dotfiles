@@ -39,9 +39,14 @@ setopt COMPLETE_IN_WORD # カーソルが単語の途中でも補完する
 setopt ALWAYS_TO_END    # 補完確定後にカーソルを単語末尾へ
 
 # 入力中に履歴から灰色でサジェストする（→ か End で確定）
-if [[ -f /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; then
-	source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
+# macOS(Homebrew) と Linux(apt) で置き場所が違うので、見つかった方を読む
+for _zsh_autosuggest in \
+	/opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh \
+	/usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+do
+	[[ -f $_zsh_autosuggest ]] && source $_zsh_autosuggest && break
+done
+unset _zsh_autosuggest
 
 # ============================================================
 # Directory navigation
